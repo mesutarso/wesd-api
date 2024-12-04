@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_composants_usage_surveys",
+  "info": {
+    "displayName": "BaselineSurveys",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "numberOfPeopleServed": {
+      "type": "integer"
+    },
+    "usageTasks": {
+      "type": "enumeration",
+      "enum": [
+        "commercial",
+        "institutionnel",
+        "domestique",
+        "autre"
+      ]
+    },
+    "typeOfFireplaceUsed": {
+      "type": "enumeration",
+      "enum": [
+        "brasero_simple",
+        "feu_a_3_pierres",
+        "autres"
+      ]
+    },
+    "typeOfFuel": {
+      "type": "enumeration",
+      "enum": [
+        "charbon",
+        "bois",
+        "autres"
+      ]
+    },
+    "estimatedFrequencyOfUsage": {
+      "type": "integer"
+    },
+    "sourceOfFuel": {
+      "type": "enumeration",
+      "enum": [
+        "achete",
+        "recolte_en_main",
+        "autres"
+      ]
+    },
+    "averageMoneyPayPerDay": {
+      "type": "integer"
+    },
+    "EstimatedFuelBurnedPerDay": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "households",
+  "info": {
+    "singularName": "household",
+    "pluralName": "households",
+    "displayName": "Household",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_identity": {
+      "type": "component",
+      "repeatable": false,
+      "component": "composants.identity"
+    },
+    "is_ICS": {
+      "type": "boolean",
+      "default": false
+    },
+    "baseline_data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "composants.usage-surveys"
+    },
+    "Ics_surveys": {
+      "type": "component",
+      "repeatable": false,
+      "component": "composants.usage-rate-surveys"
+    },
+    "supervisors_activities": {
+      "type": "component",
+      "repeatable": false,
+      "component": "composants.icss-upervisor-survey"
+    },
+    "investigator_activities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "composants.ics-investigators-survey"
+    },
+    "voa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::voa.voa",
+      "inversedBy": "households"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "households"
+    },
+    "contracts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contract.contract",
+      "mappedBy": "household"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_composants_identities",
+  "info": {
+    "displayName": "identity",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "birthday": {
+      "type": "date"
+    },
+    "sexe": {
+      "type": "enumeration",
+      "enum": [
+        "homme",
+        "femme",
+        "autre"
+      ]
+    },
+    "education": {
+      "type": "string"
+    },
+    "revenue": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "nickName": {
+      "type": "string"
+    },
+    "adresse": {
+      "type": "text"
+    }
+  }
+}

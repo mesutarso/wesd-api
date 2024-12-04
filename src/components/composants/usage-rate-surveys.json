@@ -1,0 +1,92 @@
+{
+  "collectionName": "components_composants_usage_rate_surveys",
+  "info": {
+    "displayName": "ICSSurveys",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "traditionalCharColUsed": {
+      "type": "integer"
+    },
+    "improvedCharcolUsed": {
+      "type": "integer"
+    },
+    "other": {
+      "type": "integer"
+    },
+    "yearsUsedICS": {
+      "type": "integer"
+    },
+    "isPrincipalUsed": {
+      "type": "boolean",
+      "default": false
+    },
+    "timeSinceLastUsed": {
+      "type": "enumeration",
+      "enum": [
+        "today",
+        "yesterday",
+        "twoDaysAgo",
+        "AweekAgo"
+      ]
+    },
+    "frequencyUsingPerDay": {
+      "type": "enumeration",
+      "enum": [
+        "once",
+        "twice",
+        "threeTimes",
+        "fourTimes",
+        "more"
+      ]
+    },
+    "isTraditionnalCharcolUsed": {
+      "type": "boolean"
+    },
+    "isCharcoalConsumptionsVaryInDifferentSaisons": {
+      "type": "boolean"
+    },
+    "differenceOfTraditionalCharcolAndICS": {
+      "type": "boolean"
+    },
+    "rangeOfEconomicsExpenses": {
+      "type": "enumeration",
+      "enum": [
+        "p1_20",
+        "p21_40",
+        "p41_60",
+        "p61_80",
+        "p81_90"
+      ]
+    },
+    "lessSmokeEmitted": {
+      "type": "boolean"
+    },
+    "improvedConditionsHealth": {
+      "type": "boolean"
+    },
+    "healthIssues": {
+      "type": "string"
+    },
+    "isSalesmanProvidedTraning": {
+      "type": "boolean"
+    },
+    "isSalesmanExplainedProICS": {
+      "type": "boolean"
+    },
+    "acceptance_capture": {
+      "type": "boolean"
+    },
+    "captures": {
+      "type": "json"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

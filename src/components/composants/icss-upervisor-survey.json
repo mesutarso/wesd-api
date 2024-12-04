@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_composants_icss_upervisor_surveys",
+  "info": {
+    "displayName": "ICSSUpervisorSurvey",
+    "icon": "chartPie",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "statut": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "rejected",
+        "validation"
+      ],
+      "default": "pending"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

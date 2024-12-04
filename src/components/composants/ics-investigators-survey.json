@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_composants_ics_investigators_surveys",
+  "info": {
+    "displayName": "ICSInvestigatorsSurvey",
+    "icon": "information",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isAPrimaryCook": {
+      "type": "boolean"
+    },
+    "HaveYouIntroducedSurvey": {
+      "type": "boolean"
+    },
+    "doYouTakeCaptures": {
+      "type": "boolean"
+    },
+    "doYouGetConsentement": {
+      "type": "boolean"
+    },
+    "doYouTouchICS": {
+      "type": "boolean"
+    },
+    "IsWarmOrCold": {
+      "type": "enumeration",
+      "enum": [
+        "warm",
+        "cold"
+      ]
+    },
+    "haveYouSeenICSAshes": {
+      "type": "boolean"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "voas",
+  "info": {
+    "singularName": "voa",
+    "pluralName": "voas",
+    "displayName": "voa",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "location": {
+      "type": "json"
+    },
+    "households": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::household.household",
+      "mappedBy": "voa"
+    }
+  }
+}
