@@ -20,7 +20,7 @@
       "type": "string"
     },
     "signature": {
-      "type": "string"
+      "type": "text"
     },
     "date": {
       "type": "date"

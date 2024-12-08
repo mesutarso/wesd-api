@@ -4,7 +4,8 @@
   "info": {
     "singularName": "contract",
     "pluralName": "contracts",
-    "displayName": "contract"
+    "displayName": "contract",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,6 +34,9 @@
       "relation": "manyToOne",
       "target": "api::household.household",
       "inversedBy": "contracts"
+    },
+    "signature": {
+      "type": "text"
     }
   }
 }

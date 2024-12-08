@@ -17,7 +17,7 @@ export interface ComposantsIcsInvestigatorsSurvey
     haveYouSeenICSAshes: Schema.Attribute.Boolean;
     isAPrimaryCook: Schema.Attribute.Boolean;
     IsWarmOrCold: Schema.Attribute.Enumeration<['warm', 'cold']>;
-    signature: Schema.Attribute.String;
+    signature: Schema.Attribute.Text;
   };
 }
 
@@ -31,7 +31,7 @@ export interface ComposantsIcssUpervisorSurvey extends Struct.ComponentSchema {
   attributes: {
     comments: Schema.Attribute.String;
     date: Schema.Attribute.Date;
-    signature: Schema.Attribute.String;
+    signature: Schema.Attribute.Text;
     statut: Schema.Attribute.Enumeration<
       ['pending', 'rejected', 'validation']
     > &
@@ -52,6 +52,7 @@ export interface ComposantsIdentity extends Struct.ComponentSchema {
     email: Schema.Attribute.Email;
     firstName: Schema.Attribute.String;
     lastName: Schema.Attribute.String;
+    names: Schema.Attribute.String & Schema.Attribute.Unique;
     nickName: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     revenue: Schema.Attribute.String;
@@ -88,7 +89,7 @@ export interface ComposantsUsageRateSurveys extends Struct.ComponentSchema {
     rangeOfEconomicsExpenses: Schema.Attribute.Enumeration<
       ['p1_20', 'p21_40', 'p41_60', 'p61_80', 'p81_90']
     >;
-    signature: Schema.Attribute.String;
+    signature: Schema.Attribute.Text;
     timeSinceLastUsed: Schema.Attribute.Enumeration<
       ['today', 'yesterday', 'twoDaysAgo', 'AweekAgo']
     >;
@@ -109,7 +110,7 @@ export interface ComposantsUsageSurveys extends Struct.ComponentSchema {
     estimatedFrequencyOfUsage: Schema.Attribute.Integer;
     EstimatedFuelBurnedPerDay: Schema.Attribute.String;
     numberOfPeopleServed: Schema.Attribute.Integer;
-    signature: Schema.Attribute.String;
+    signature: Schema.Attribute.Text;
     sourceOfFuel: Schema.Attribute.Enumeration<
       ['achete', 'recolte_en_main', 'autres']
     >;

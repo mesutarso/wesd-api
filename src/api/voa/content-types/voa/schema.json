@@ -25,6 +25,9 @@
       "relation": "oneToMany",
       "target": "api::household.household",
       "mappedBy": "voa"
+    },
+    "code": {
+      "type": "string"
     }
   }
 }

@@ -40,6 +40,10 @@
     },
     "adresse": {
       "type": "text"
+    },
+    "names": {
+      "type": "string",
+      "unique": true
     }
   }
 }

@@ -33,7 +33,7 @@
       "type": "boolean"
     },
     "signature": {
-      "type": "string"
+      "type": "text"
     },
     "date": {
       "type": "date"

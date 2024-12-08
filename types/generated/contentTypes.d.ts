@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiContractContract extends Struct.CollectionTypeSchema {
   collectionName: 'contracts';
   info: {
+    description: '';
     displayName: 'contract';
     pluralName: 'contracts';
     singularName: 'contract';
@@ -401,6 +402,7 @@ export interface ApiContractContract extends Struct.CollectionTypeSchema {
     serial_number: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
+    signature: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -436,6 +438,7 @@ export interface ApiHouseholdHousehold extends Struct.CollectionTypeSchema {
       true
     >;
     is_ICS: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isEditing: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -471,6 +474,7 @@ export interface ApiVoaVoa extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    code: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

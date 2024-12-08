@@ -58,6 +58,10 @@
       "relation": "oneToMany",
       "target": "api::contract.contract",
       "mappedBy": "household"
+    },
+    "isEditing": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

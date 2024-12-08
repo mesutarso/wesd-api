@@ -83,7 +83,7 @@
       "type": "json"
     },
     "signature": {
-      "type": "string"
+      "type": "text"
     },
     "date": {
       "type": "date"

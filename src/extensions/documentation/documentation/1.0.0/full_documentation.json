@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-03T13:44:30.689Z"
+    "x-generation-date": "2024-12-08T03:30:41.671Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -24,7 +24,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
+      "url": "http://localhost:1345/api",
       "description": "Development server"
     }
   ],
@@ -3046,6 +3046,9 @@
                 ],
                 "example": "string or id"
               },
+              "signature": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               },
@@ -3185,6 +3188,9 @@
                         }
                       }
                     }
+                  },
+                  "code": {
+                    "type": "string"
                   },
                   "createdAt": {
                     "type": "string",
@@ -3790,6 +3796,9 @@
                         }
                       }
                     },
+                    "signature": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -3844,6 +3853,9 @@
                   }
                 }
               },
+              "isEditing": {
+                "type": "boolean"
+              },
               "createdAt": {
                 "type": "string",
                 "format": "date-time"
@@ -3896,6 +3908,9 @@
                 }
               }
             }
+          },
+          "signature": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -4002,6 +4017,9 @@
             "type": "string"
           },
           "adresse": {
+            "type": "string"
+          },
+          "names": {
             "type": "string"
           }
         }
@@ -4280,6 +4298,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "isEditing": {
+                "type": "boolean"
               },
               "locale": {
                 "type": "string"
@@ -4974,6 +4995,9 @@
                               }
                             }
                           },
+                          "signature": {
+                            "type": "string"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -5028,6 +5052,9 @@
                         }
                       }
                     },
+                    "isEditing": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -5081,6 +5108,9 @@
                     }
                   }
                 }
+              },
+              "code": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -5159,6 +5189,9 @@
                 }
               }
             }
+          },
+          "isEditing": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -5253,6 +5286,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "code": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -5384,6 +5420,9 @@
                           }
                         }
                       }
+                    },
+                    "code": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -5989,6 +6028,9 @@
                           }
                         }
                       },
+                      "signature": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -6043,6 +6085,9 @@
                     }
                   }
                 },
+                "isEditing": {
+                  "type": "boolean"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -6096,6 +6141,9 @@
                 }
               }
             }
+          },
+          "code": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
