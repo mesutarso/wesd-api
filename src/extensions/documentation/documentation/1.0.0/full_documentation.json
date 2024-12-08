@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2024-12-08T03:30:41.671Z"
+    "x-generation-date": "2024-12-08T15:34:17.809Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -3706,6 +3706,12 @@
                       }
                     }
                   },
+                  "names": {
+                    "type": "string"
+                  },
+                  "phone": {
+                    "type": "string"
+                  },
                   "createdAt": {
                     "type": "string",
                     "format": "date-time"
@@ -3855,6 +3861,9 @@
               },
               "isEditing": {
                 "type": "boolean"
+              },
+              "editingBy": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -4301,6 +4310,9 @@
               },
               "isEditing": {
                 "type": "boolean"
+              },
+              "editingBy": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -4905,6 +4917,12 @@
                             }
                           }
                         },
+                        "names": {
+                          "type": "string"
+                        },
+                        "phone": {
+                          "type": "string"
+                        },
                         "createdAt": {
                           "type": "string",
                           "format": "date-time"
@@ -5055,6 +5073,9 @@
                     "isEditing": {
                       "type": "boolean"
                     },
+                    "editingBy": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -5192,6 +5213,9 @@
           },
           "isEditing": {
             "type": "boolean"
+          },
+          "editingBy": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -5938,6 +5962,12 @@
                         }
                       }
                     },
+                    "names": {
+                      "type": "string"
+                    },
+                    "phone": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -6087,6 +6117,9 @@
                 },
                 "isEditing": {
                   "type": "boolean"
+                },
+                "editingBy": {
+                  "type": "string"
                 },
                 "createdAt": {
                   "type": "string",

@@ -62,6 +62,9 @@
     "isEditing": {
       "type": "boolean",
       "default": false
+    },
+    "editingBy": {
+      "type": "string"
     }
   }
 }
