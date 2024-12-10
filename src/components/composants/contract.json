@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_composants_contracts",
+  "info": {
+    "displayName": "contract",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "model": {
+      "type": "string"
+    },
+    "serial_number": {
+      "type": "string"
+    },
+    "salesman": {
+      "type": "string"
+    },
+    "contact_salesman": {
+      "type": "string"
+    },
+    "magasin": {
+      "type": "string"
+    },
+    "statut": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "validated",
+        "rejected"
+      ]
+    },
+    "comments": {
+      "type": "text"
+    }
+  }
+}

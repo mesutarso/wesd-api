@@ -54,23 +54,9 @@
       "inversedBy": "households"
     },
     "contracts": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::contract.contract",
-      "mappedBy": "household"
-    },
-    "isEditing": {
-      "type": "boolean",
-      "default": false
-    },
-    "editingBy": {
-      "type": "string"
-    },
-    "statut": {
-      "type": "string"
-    },
-    "observation": {
-      "type": "richtext"
+      "type": "component",
+      "repeatable": false,
+      "component": "composants.contract"
     }
   }
 }

@@ -402,46 +402,6 @@ export interface ApiActivitylogActivitylog extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiContractContract extends Struct.CollectionTypeSchema {
-  collectionName: 'contracts';
-  info: {
-    description: '';
-    displayName: 'contract';
-    pluralName: 'contracts';
-    singularName: 'contract';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    contact_salesman: Schema.Attribute.String;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    household: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::household.household'
-    >;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::contract.contract'
-    > &
-      Schema.Attribute.Private;
-    magasin: Schema.Attribute.String;
-    model: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    salesman: Schema.Attribute.String;
-    serial_number: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
-    signature: Schema.Attribute.Text;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiHouseholdHousehold extends Struct.CollectionTypeSchema {
   collectionName: 'households';
   info: {
@@ -458,11 +418,10 @@ export interface ApiHouseholdHousehold extends Struct.CollectionTypeSchema {
       'composants.usage-surveys',
       false
     >;
-    contracts: Schema.Attribute.Relation<'oneToMany', 'api::contract.contract'>;
+    contracts: Schema.Attribute.Component<'composants.contract', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    editingBy: Schema.Attribute.String;
     Ics_surveys: Schema.Attribute.Component<
       'composants.usage-rate-surveys',
       false
@@ -472,16 +431,13 @@ export interface ApiHouseholdHousehold extends Struct.CollectionTypeSchema {
       true
     >;
     is_ICS: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    isEditing: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::household.household'
     > &
       Schema.Attribute.Private;
-    observation: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
-    statut: Schema.Attribute.String;
     supervisors_activities: Schema.Attribute.Component<
       'composants.icss-upervisor-survey',
       false
@@ -1051,7 +1007,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::activitylog.activitylog': ApiActivitylogActivitylog;
-      'api::contract.contract': ApiContractContract;
       'api::household.household': ApiHouseholdHousehold;
       'api::voa.voa': ApiVoaVoa;
       'plugin::content-releases.release': PluginContentReleasesRelease;
