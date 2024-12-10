@@ -14,6 +14,7 @@ export interface ComposantsContract extends Struct.ComponentSchema {
     model: Schema.Attribute.String;
     salesman: Schema.Attribute.String;
     serial_number: Schema.Attribute.String;
+    signature: Schema.Attribute.Text;
     statut: Schema.Attribute.Enumeration<['pending', 'validated', 'rejected']>;
   };
 }

@@ -32,6 +32,9 @@
     },
     "comments": {
       "type": "text"
+    },
+    "signature": {
+      "type": "text"
     }
   }
 }
