@@ -369,6 +369,39 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiActivitylogActivitylog extends Struct.CollectionTypeSchema {
+  collectionName: 'activitylogs';
+  info: {
+    displayName: 'activitylog';
+    pluralName: 'activitylogs';
+    singularName: 'activitylog';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    action: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::activitylog.activitylog'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    type: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    users_permissions_user: Schema.Attribute.Relation<
+      'manyToOne',
+      'plugin::users-permissions.user'
+    >;
+  };
+}
+
 export interface ApiContractContract extends Struct.CollectionTypeSchema {
   collectionName: 'contracts';
   info: {
@@ -446,7 +479,9 @@ export interface ApiHouseholdHousehold extends Struct.CollectionTypeSchema {
       'api::household.household'
     > &
       Schema.Attribute.Private;
+    observation: Schema.Attribute.RichText;
     publishedAt: Schema.Attribute.DateTime;
+    statut: Schema.Attribute.String;
     supervisors_activities: Schema.Attribute.Component<
       'composants.icss-upervisor-survey',
       false
@@ -954,6 +989,10 @@ export interface PluginUsersPermissionsUser
     draftAndPublish: false;
   };
   attributes: {
+    activitylogs: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::activitylog.activitylog'
+    >;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
     confirmed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -1011,6 +1050,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::activitylog.activitylog': ApiActivitylogActivitylog;
       'api::contract.contract': ApiContractContract;
       'api::household.household': ApiHouseholdHousehold;
       'api::voa.voa': ApiVoaVoa;

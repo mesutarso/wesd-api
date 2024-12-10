@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activitylogs",
+  "info": {
+    "singularName": "activitylog",
+    "pluralName": "activitylogs",
+    "displayName": "activitylog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "activitylogs"
+    }
+  }
+}

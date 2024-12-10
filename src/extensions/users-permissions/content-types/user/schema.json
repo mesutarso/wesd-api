@@ -76,6 +76,12 @@
     },
     "phone": {
       "type": "string"
+    },
+    "activitylogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activitylog.activitylog",
+      "mappedBy": "users_permissions_user"
     }
   }
 }
