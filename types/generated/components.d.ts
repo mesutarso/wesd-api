@@ -1,5 +1,23 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ComposantsContract extends Struct.ComponentSchema {
+  collectionName: 'components_composants_contracts';
+  info: {
+    description: '';
+    displayName: 'contract';
+    icon: 'calendar';
+  };
+  attributes: {
+    comments: Schema.Attribute.Text;
+    contact_salesman: Schema.Attribute.String;
+    magasin: Schema.Attribute.String;
+    model: Schema.Attribute.String;
+    salesman: Schema.Attribute.String;
+    serial_number: Schema.Attribute.String;
+    statut: Schema.Attribute.Enumeration<['pending', 'validated', 'rejected']>;
+  };
+}
+
 export interface ComposantsIcsInvestigatorsSurvey
   extends Struct.ComponentSchema {
   collectionName: 'components_composants_ics_investigators_surveys';
@@ -127,6 +145,7 @@ export interface ComposantsUsageSurveys extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'composants.contract': ComposantsContract;
       'composants.ics-investigators-survey': ComposantsIcsInvestigatorsSurvey;
       'composants.icss-upervisor-survey': ComposantsIcssUpervisorSurvey;
       'composants.identity': ComposantsIdentity;
